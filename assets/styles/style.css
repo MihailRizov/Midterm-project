@@ -1,6 +1,6 @@
 @font-face {
     font-family: myFont;
-    src: url(../fonts/Cabin-Regular.ttf);
+    src: url(../fonts/Comfortaa-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -166,6 +166,9 @@ body > #wrapper > main > aside li:hover{
 
 }
 
+main .carousel-inner img {
+    height:293px;
+}
 body > #wrapper > main > aside li a:hover{
     color:white; 
 }
