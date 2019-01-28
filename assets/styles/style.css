@@ -79,7 +79,6 @@ body > #wrapper > header > .rightBox > #loggin {
 
 hr.style-border {
     height: 15px;
-    border: 0;
     display: inline-block;
     width:100%;
     box-sizing: border-box;
@@ -89,7 +88,6 @@ hr.style-border {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
-    margin-top:-10px;
 }  
 
 /* body > #wrapper > header > .rightBox > #orders {
@@ -100,7 +98,7 @@ hr.style-border {
 } */
 
 body > #wrapper > header > .rightBox > #basket {
-    background-image: url('../images/bag1.png');
+    background-image: url('../images/bag.png');
     cursor:pointer;
     width:40px;
     float:left;
@@ -108,8 +106,8 @@ body > #wrapper > header > .rightBox > #basket {
     height:33px;
     margin-top:10px;
     background-repeat: no-repeat;
-    background-size:35px;
-    border:1px solid rgb(66, 125, 15);
+    background-size:30px;
+    /* border:1px solid rgb(66, 125, 15); */
     
 }
 
@@ -126,16 +124,26 @@ body > #wrapper > header > .rightBox > #number-orders {
 }
 
 /* ================ MAIN ==================== */
+body > #wrapper > main {
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+ aside {
+    width:200px;
+ }
 
-aside > div{
+ aside > div{
     width: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 30px;
     color:rgb(19, 53, 28);
-   font-weight: bold;
-   padding-left: 10px;
+    font-weight: bold;
+    padding-left: 10px;
 }
 aside >div ~ div:hover{
     background-color: rgb(19, 53, 28);
@@ -152,8 +160,6 @@ aside >div ~ div:hover{
     margin-right: 10px;
 }
 
-
-/***************HEAD****************/
 body > #wrapper > main > aside a:hover{
     width: 100%;
 }
@@ -163,11 +169,7 @@ main .carousel-inner img {
 body > #wrapper > main > aside li a:hover{
     color:white; 
 }
-body > #wrapper > main {
-  width:100%;
-  display:inline-block;
-  box-sizing: border-box;
-}
+
 
 #carouselExampleIndicators {
     width:68%;
