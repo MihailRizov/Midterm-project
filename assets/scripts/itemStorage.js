@@ -163,26 +163,31 @@ var toolBox = {
 
 }
 
-
-
-
-
-
-
-
-
-
-
 itemStorage.set('women',[]).set('man',[]).set('children',[]).set('sport', []).set('bags', []).set('shoes', []);
 
-const TITLE_WOMAN = ['Дамски панталон', 'Рокля', 'Дамска блуза с къс ръкав', '']
+const TITLE_WOMAN = ['Дамска рокля с панделка', 'Дамска блуза с къс ръкав', 'Дамски топ с акцент на рамото', 'Дамски топ с интересен гръб', 'Дамски къс топ','Дамски потник с връзки']
+const TITLE_WOMAN_SRC = ['http://vmzona.com/product_pics/big/IMG_8545copy_1158043.jpg',
+'http://vmzona.com/product_pics/big/IMG_3423_1158348.JPG',
+'http://vmzona.com/product_pics/big/IMG_5730copy_1022816.jpg',
+'http://vmzona.com/product_pics/big/1_1117616.jpg',
+'http://vmzona.com/product_pics/big/IMG_8226copy_1130871.jpg',
+'http://vmzona.com/product_pics/big/IMG_7939_1045619_1045619.jpg'];
+const COLOR_WOMAN = ['тъмно зелен', 'черен', 'черен', 'бял', 'зелен', 'розов'];
+const SIZE = ['M','L', 'XS', 'XS', 'S', 'XXL'];
 
 class Item {
-    constructor(title, imgSrc, size){
+    constructor(title, imgSrc, size, price){
         this.title = title;
         this.size = size;
         this.delivery = '48 часа';
+        this.imgSrc = imgSrc;
         this.quantity = Math.ceil(Math.random() * 10);
-        this.id = uniqueIDAssigner.getUnicueID();
+        this.id = toolBox.uniqueIDAssigner.getUnicueID();
+        this.price = price;
     }
 }
+for (let index = 0; index < TITLE_WOMAN.length; index++){
+    itemStorage.get('women').push(new Item((toolBox.getNextElement(TITLE_WOMAN))(),(toolBox.getNextElement(TITLE_WOMAN_SRC))(), (toolBox.getNextElement(SIZE_WOMAN))(), (Math.random() * (200- 100) + 100).toFixed(2)));
+
+}
+console.log(itemStorage.get('women'));
