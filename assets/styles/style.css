@@ -237,12 +237,12 @@ main > .sections {
     align-items: center;
     border:outset;
     border-radius: 10px;
+    transition: transform .3s;
 }
 
 .sections > div:hover {
-    width:40%;
-    height:420px;
     z-index:3;
+    transform: scale(1.2);
     border-radius:20px;
     -webkit-box-shadow: 10px 10px 110px 49px rgba(87,84,87,1);
     -moz-box-shadow: 10px 10px 110px 49px rgba(87,84,87,1);
