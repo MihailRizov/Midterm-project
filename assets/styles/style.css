@@ -16,6 +16,105 @@ body > #wrapper {
     margin: 0 auto;
 }
 
+/* =================LOADER================== */
+
+#preloader-wrapper {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index:112;
+    background: rgb(0, 0, 0);
+}
+
+#preloader-wrapper > p {
+  position:relative;
+  font-size:1.8em;
+  top:100px;
+  left:30px;
+  font-weight:initial;
+  text-align: center;
+  color: rgb(41, 119, 41);
+  /* color:white; */
+  z-index:113; 
+  
+ 
+}
+
+#loader {
+    display:block;
+    position:relative;
+    left:50%;
+    top:50%;
+    width:200px;
+    height:200px;
+    margin:-75px 0 0 -75px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color:#115c36;
+    z-index:113;
+
+    -webkit-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top:5px;
+    left:5px;
+    right: 5px;
+    bottom:5px;
+    border-radius: 50%;
+    border:6px solid transparent;
+    border-top-color: #1ce03c; 
+
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top:15px;
+    left:15px;
+    right: 15px;
+    bottom:15px;
+    border-radius: 50%;
+    border:5px solid transparent;
+    border-top-color: #0f770f;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+} 
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 /* ============= HEADER ============== */
 
 header {

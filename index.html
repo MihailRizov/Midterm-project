@@ -24,6 +24,36 @@
 </head>
 
 <body>
+    
+        <div id="preloader-wrapper">
+                <p>Добре дошли в най-популярният сайт за дрехи GMzone.com!</p>
+        
+                <div id="loader"></div>
+        
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+        
+            </div>
+            </div>
+        
+            <script>
+                let loader = document.getElementById('preloader-wrapper');
+               loader.style.opacity=1;
+        
+                function fadeAway() {
+                    if(loader.style.opacity==0){
+                        loader.style.display = 'none';
+                        return;
+                    }
+                    if(loader.style.opacity>0){
+                        loader.style.opacity -= 0.01;
+                        setTimeout(fadeAway, 100);
+                    }
+                };
+                setTimeout(fadeAway, 500);
+        
+            </script>
+
     <div id="wrapper">
         <header>
             <div id="logo">
