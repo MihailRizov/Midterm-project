@@ -20,6 +20,11 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/resetCSS.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="/assets/scripts/itemStorage.js"></script>
+    <script src="/assets/scripts/itemControler.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <link rel="stylesheet" href="assets/styles/resetCSS.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <title>GMzone.com</title>
 </head>
 
@@ -74,35 +79,35 @@
                 <div id="cat">
                     <h2>Категории</h2>
                 </div>
-                <div>
+                <div id="cat1">
                     <h2>Мъже</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat2">
                     <h2>Жени</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat3">
                     <h2>Деца</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat4">
                     <h2>Чанти</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat5">
                     <h2>Обувки</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat6">
                     <h2>Спорт</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat7">
                     <h2>Козметика</h2>
                     <div id="arrow"></div>
                 </div>
-                <div>
+                <div id="cat8">
                     <h2>Други</h2>
                     <div id="arrow"></div>
                 </div>
@@ -160,6 +165,12 @@
                 </div>
             </div>
         </main>
+        <script id='items' type="text/x-handlebars-template">
+            <div style="background-image: url({{imgSrc}})">
+                <h2>{{title}}</h2>
+                <p>{{price}}</p>
+            </div>
+        </script>
         <hr class="style-border" />
         <footer>
             <section id="boxFooter">
