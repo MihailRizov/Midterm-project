@@ -398,7 +398,14 @@ main > .sections {
   color:white;
   font-weight:bold;
 }
-
+/* ========== ITEMZ ============ */
+#itemz{
+    width: 29%;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 /* ========== FOOTER ============ */
 
