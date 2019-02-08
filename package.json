@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MihailRizov/Midterm-project#readme",
   "dependencies": {
-    "handlebars": "^4.0.12"
+    "handlebars": "^4.0.12",
+    "jquery": "^3.3.1"
   }
 }
