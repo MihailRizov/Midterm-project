@@ -9,7 +9,6 @@ function router() {
 
     switch (page) {
         case 'home' : homeController(); break;
-        case 'login' : loginController();break;
         case 'cat1' : catController(); break;
         case 'cat2' : catController(); break;
         case 'cat3' : catController(); break;
@@ -17,6 +16,8 @@ function router() {
         case 'cat5' : catController(); break;
         case 'cat6' : catController(); break;
         case 'cat7' : catController(); break;
+        case 'login' : loginController(); break;
+        case 'register' : registerController(); break;
 
         default: homeController();
     }

@@ -25,7 +25,7 @@ var userStorage = (function(){
         userList = JSON.parse(localStorage.getItem('userList'));
     } else {
         userList = [
-            new User('a','1', 'a@a.com')
+            new User('a','1', 'aaa')
         ]
     }
 
@@ -35,7 +35,7 @@ var userStorage = (function(){
         var currentUser = null;
     }
     
-
+console.log(userList)
     return {
         logIn: function(email, pass){
             var loginUser = userList.find(user => user.email === email && user.password === pass);

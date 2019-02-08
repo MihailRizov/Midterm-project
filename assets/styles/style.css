@@ -460,7 +460,7 @@ main > .sections {
     z-index:3;
     cursor: pointer;
 }
-#itemz h2,p{
+#itemz h2, .classP{
     font-size:0.7em;
     color:black;
     background-color: white;
