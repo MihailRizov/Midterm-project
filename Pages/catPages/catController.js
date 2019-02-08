@@ -10,5 +10,5 @@ function catController (){
             templateString = text;
             }).then(() => template = Handlebars.compile(templateString))
             .then(() => content.forEach(content => htm+= template(content)))
-            .then(() => $('main').html(htm));
+            .then(() => $('main').html(htm))
 };
