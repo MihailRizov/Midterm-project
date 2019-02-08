@@ -1,9 +1,9 @@
 window.addEventListener('DOMContentLoaded', function(){
     var menu = new Map();
-    var hompage = document.querySelector("main").innerHTML;
+    var homepage = document.querySelector("main").innerHTML;
 
 document.querySelector('#logo').addEventListener('click', function(){
-    document.querySelector('main').innerHTML = hompage;
+    document.querySelector('main').innerHTML = homepage;
 },false)
 
 document.querySelectorAll('aside>div').forEach(div => {
