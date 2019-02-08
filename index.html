@@ -15,7 +15,6 @@
     pantaloni, teniski, bluzi, kusi gashti, kusi ga6ti, banski, belio, stoki,damski,  online magazin, shop, online shop, za nos, za ezik, bulgarski obuvki, detski obuvki, ">
     <link rel='shortcut icon' type='image/x-icon' href='assets/images/GMicon.whiteLetters.ico' />
 
-    <!-- <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by rawpixel.com - www.freepik.com</a> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/resetCSS.css">
@@ -34,7 +33,7 @@
                 <p>Добре дошли в най-популярният сайт за дрехи GMzone.com!</p>
         
                 <div id="loader"></div>
-        
+                <img src="assets/images/logo_img.png" alt="Logo" />
                 <div class="loader-section section-left"></div>
                 <div class="loader-section section-right"></div>
         
@@ -52,10 +51,10 @@
                     }
                     if(loader.style.opacity>0){
                         loader.style.opacity -= 0.01;
-                        setTimeout(fadeAway, 100);
+                        setTimeout(fadeAway, 80);
                     }
                 };
-                setTimeout(fadeAway, 500);
+                setTimeout(fadeAway, 160);
         
             </script>
 
@@ -165,14 +164,18 @@
                 </div>
             </div>
         </main>
+       
         <script id='items' type="text/x-handlebars-template">
+             <!-- <div class="sections"> -->
             <div id='itemz' style='background-image: url("{{imgSrc}}");'>
-                <h2>{{title}}</h2>
-                <p>{{price}}</p>
-                <p> {{color}}</p>
-                <p> {{size}}</p>
+                <h2> Модел: {{title}}</h2>
+                <p style= 'color: red'> Цена: {{price}} лв</p>
             </div>
+            <!-- </div> -->
+        </div>
         </script>
+    
+
         <hr class="style-border" />
         <footer>
             <section id="boxFooter">
@@ -205,11 +208,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <script>
+        <!-- <script>
         window.addEventListener('beforeprint', function(event){
             alert('Hi');
         }, false);
-        </script>
+        </script> -->
 </body>
 
 </html>
