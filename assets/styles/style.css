@@ -455,8 +455,6 @@ main > .sections {
     -webkit-box-shadow: 10px 10px 110px 49px rgba(87,84,87,1);
     -moz-box-shadow: 10px 10px 110px 49px rgba(87,84,87,1);
     box-shadow: 10px 10px 110px 49px rgba(87,84,87,1);
-    margin-top:50px;
-    margin-bottom:50px;
     z-index:3;
     cursor: pointer;
 }
@@ -480,6 +478,70 @@ main > .sections {
     padding-top:8px;
     text-align: center; */
 }
+
+/* ================Current Item================== */
+.currentItem{
+    width:100%;
+    height:1013px;
+    /* border:1px solid red; */
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+#image{
+    /* border:1px solid red; */
+    width:50%;
+    display: inline-block;
+    background-size: contain;
+    background-position:center; 
+    background-repeat: no-repeat;
+    height:600px;
+}
+#itemInformation{
+    /* border:1px solid red; */
+    width:48%;
+    height:400px;
+    
+}
+
+#itemInformation *{
+    /* border:1px solid green; */
+    height:40px;
+    text-align: left;
+    padding-top:11px;
+    /* background-color: rgb(186, 248, 174); */
+    font-size:1.1em;
+    margin-top:20px;
+}
+
+#buttons{
+    height:100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#itemInformation #buy,#back {
+    border-radius: 30px;
+    text-align: center;
+    font-size:1.2em;
+    width:150px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    color:white;
+    height:50px;
+    outline: none;
+}
+
+#pr{
+    font-weight: bold;
+    color: red;
+}
+
+
+
 /* ========== FOOTER ============ */
 
 body > #wrapper > footer {

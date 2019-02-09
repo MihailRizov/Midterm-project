@@ -7,7 +7,7 @@ var userStorage = (function(){
             this.name = name;
             this.password = password;
             this.id = userId++;
-                this.shopingCart = [21,1,1,1,1,1,1,1,1,1,1,1];
+                this.shopingCart = [1,1,1,1];
                 this.email=email;
         }
 

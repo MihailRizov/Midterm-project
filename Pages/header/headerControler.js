@@ -16,8 +16,8 @@ $(function () {
 
     $('#number-orders').on('click', (event) => {
         event.preventDefault();
-        if ((userStorage.getCurrentUser() !== null) && userStorage.getCurrentUser().getItemCount() > 1) {
-            $('#number-orders').text(userStorage.getCurrentUser().getItemCount());
+        if (userStorage.getCurrentUser() && userStorage.getShopingCart().length) {
+            $('#number-orders').text(userStorage.getShopingCart().length);
         } else {
             $('#number-orders').text('0');
         }
@@ -25,23 +25,37 @@ $(function () {
 
     $('#basket').on('click', (event) => {
         event.preventDefault();
-
-        // if (userStorage.getCurrentUser().getItemCount() > 1) {
-        //     location.replace('#page=shoppingBasket');
-        // } else {
-            if (userStorage.getCurrentUser() === null) {
+        console.log(8888888)
+        if (userStorage.getCurrentUser() && userStorage.getShopingCart().length) {
+            location.replace('#page=shoppingBasket');
+            if (userStorage.getShopingCart().length < 1) {
                 $('#basket').animate({
                     width: 250,
                 }, 500).text('Нямате налични артикули.').animate({
-                    width:50,
-                   fontSize:0.8,
-                }, 5000,  ()=>{
-              
+                    width: 50,
+                    fontSize: 0.8,
+                }, 5000, () => {
                     $('#basket').text('');
-                    
-                });
+                })
+                console.log(777777777777)
+            }else{
+                location.replace('#page=shoppingBasket');
+                console.log(4444)
             }
-        // }
+        
+        } else {
+            $('#basket').animate({
+                width: 250,
+            }, 500).text('Нямате налични артикули.').animate({
+                width: 50,
+            }, 5000, () => {
+
+                $('#basket').text('');
+
+            });
+            console.log(99999)
+        }
+    
     });
 
 });

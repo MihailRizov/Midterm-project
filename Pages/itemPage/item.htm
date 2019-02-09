@@ -1,12 +1,19 @@
-<div class='currentItem' itemId='{{id}}' style='background-image: url("{{imgSrc}}");'>
-    <h2> Модел: {{title}}</h2>
-    <p> цвят: {{color}}</p>
-    {{#if size}}
-    <p>размер: {{size}}</p>
-    {{/if}}
-    <p>доставка: {{delivery}}</p>
-    <p>количество: {{quantity}}бр.</p>
-    <p></p>
+<div class='currentItem' itemId='{{id}}'>
+    <div id="image" style="background-image: url({{imgSrc}})"></div>
 
-    <p class="classP" style= 'color: red'> Цена: {{price}} лв</p>
+    <div id="itemInformation">
+        <h2> Модел: {{title}}</h2>
+        <p> Цвят: {{color}}</p>
+        {{#if size}}
+        <p>Размер: {{size}}</p>
+        {{/if}}
+        <p>Коставка: {{delivery}}</p>
+        <p>Количество: {{quantity}} бр.</p>
+        <p id="pr"> Цена: {{price}} лв</p>
+        <div id="buttons">
+            <button id="back">Назад</button>
+            <button id="buy">Купи</button>
+        </div>
+    </div>
+
 </div>
