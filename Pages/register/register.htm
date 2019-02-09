@@ -18,7 +18,7 @@
             margin-left:auto;
             margin-right: auto;
             padding:10px;
-            background-color: rgb(199, 253, 188);
+            background-color: rgb(186, 248, 174);
         
         }
         
@@ -30,21 +30,23 @@
          #login {
             height:50px;
             width: 49%;;
-            background-color: rgb(131, 195, 21);
+            background-color: rgb(25, 153, 59);
             border-radius: 10px;
             text-transform: uppercase;
             font-weight: bold;
+            cursor: pointer;
             
         }
         
          #registration {  
             border-radius: 10px; 
             width:49%;
-            background-color: rgb(131, 195, 21);
+            background-color: rgb(25, 153, 59);
             float:right;
             height:50px;
             text-transform: uppercase;
             font-weight: bold;
+            cursor: pointer;
         }
         
         #login-register > .infoRegister{
@@ -78,6 +80,7 @@
             background-color: rgb(19, 53, 28);
             border-radius: 10px;
             color:white;
+            cursor: pointer;
             
         }
         input[type=submit]{
@@ -114,28 +117,16 @@
             position: absolute;
             background-color: gray;
             color:rgb(16, 37, 16);
-            top: 0;
-            left: 970px;
+            top: 190px;
+            left: 1080px;
             width:30px;
             height:30px;
             border-radius: 50%;
             font-weight: bold;
             font-size:1.3em;
+            cursor: pointer;
         }
-        
-        #exit1{
-            position: absolute;
-            background-color: gray;
-            color:rgb(16, 37, 16);
-            top: 0;
-            left: 880px;
-            width:30px;
-            height:30px;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size:1.3em; 
-        }
-        
+     
         #formReg {
             display:flex;
             justify-content: center;
@@ -187,6 +178,7 @@
         margin-top:5px;
         margin-bottom:10px;
         color:white;
+        cursor: pointer;
         }
         
         .error{
@@ -209,7 +201,7 @@
 
 <div id="login-register">
     <div id="generalBox">
-        <button id="exit1">X</button>
+        <button id="exit">X</button>
         <button id="login">Вход</button>
         <button id="registration" disabled>Регистрация</button>
     </div>
@@ -257,7 +249,7 @@
         <span>*Съгласен съм с <a href=""> Условията за ползване</a> на този сайт!</span>
         <span class="error"></span>
     </div>
-    <div id="registerCheckbox2">
+    <div id="registerCheckbox2">  
         <input type="checkbox" id="agree" />
         <span>*Съгласен съм с <a href="">Условията за предоставяне на лични данни!</a> </span>
         <p class="error"></p>

@@ -10,7 +10,7 @@ function loginController () {
                 if (userStorage.logIn(email, pass)) {
                     console.log(email);
                     console.log(pass);
-                    $('#loggin').text('Log Out')
+                    $('#loggin').text('Изход')
                     location.replace('#page=home');
                 } else {
                     $('#email').css('background-color', 'rgba(250, 25, 25, 0.76)');
@@ -21,9 +21,18 @@ function loginController () {
             })
         }
     
-        $('#newReg').on('click', () => location.replace('#page=register'));
+        $('#newReg').on('click', (event) =>{
+            event.preventDefault();
+        location.replace('#page=register')});
             
-        $('#registration').on('click', () => location.replace('#page=register')); 
+        $('#registration').on('click', (event) =>{
+            event.preventDefault();
+            location.replace('#page=register')}); 
+
+        $('#exit').on('click', (event)=>{
+            event.preventDefault();
+            location.replace('#page=home');
+        })
     });
 
     
