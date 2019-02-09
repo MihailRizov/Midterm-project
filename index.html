@@ -62,10 +62,10 @@
                     }
                     if(loader.style.opacity>0){
                         loader.style.opacity -= 0.01;
-                        setTimeout(fadeAway, 80);
+                        setTimeout(fadeAway, 0);
                     }
                 };
-                setTimeout(fadeAway, 160);
+                setTimeout(fadeAway, 0);
         
             </script>
 
@@ -77,11 +77,9 @@
             <div class="rightBox">
                 <input class="search" type="text" placeholder="Търсене..." />
                 <button id="loggin">Вход / Регистрация</button>
-                <!-- <div id="orders"> -->
-                <div id="basket"></div>
-                <div id="number-orders"></div>
-                <!-- </div> -->
-            </div>
+                <button id="basket"></button>
+                <button id="number-orders">0</button>
+               </div>
             <hr class="style-border" />
         </header>
 
