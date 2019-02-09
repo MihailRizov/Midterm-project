@@ -38,12 +38,9 @@ function registerController() {
                 $('#registerBox4 > .error').text('');
             }
 
-            // if ($('#registerCheckbox1').is(':checked') && $('#registerCheckbox2').is(':checked')) {
-            if ($('input[type=checkbox]:checked')) {
+            if ($('#agree1').is(':checked') && $('#agree2').is(':checked')) {
                 $('#registerCheckbox2 > .error').text('');
-                console.log('gggggggg')
             } else {
-                console.log(1111111111);
                 $('#registerCheckbox2 > .error').text('Трябва да се съгласите с Условията за ползване и с Условията за предоставяне на лични данни, за да продължите!');
                 hasErrors = true;
             }
@@ -51,7 +48,6 @@ function registerController() {
             if (!hasErrors) {
                 userStorage.register(username, password, email);
                 location.replace('#page=login');
-                console.log(88888888)
             }
 
         });
