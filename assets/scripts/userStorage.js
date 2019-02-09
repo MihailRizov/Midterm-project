@@ -10,15 +10,15 @@ var userStorage = (function(){
             this.shopingCart = [];
             this.email=email;
         }
-        addItem(item){
-            this.shopingCart.push(item)
-        }
-        getShopingCart(){
-            return this.shopingCart;
-        }
-        getItemCount(){
-            return this.shopingCart.length += 1;
-        }
+        // addItem(item){
+        //     this.shopingCart.push(item)
+        // }
+        // getShopingCart(){
+        //     return this.shopingCart;
+        // }
+        // getItemCount(){
+        //     return this.shopingCart.length += 1;
+        // }
     }
 
     if (localStorage.getItem('userList') !== null) {
@@ -58,7 +58,22 @@ console.log(userList)
         register: function(username, password,email) {
             userList.push(new User(username, password,email));
             localStorage.setItem('userList', JSON.stringify(userList));
+        },
+        addItem: function(item){
+            var index = userList.findIndex(user => user.id === currentUser.id)
+            userList[index].shopingCart.push(item);
+            localStorage.setItem('userList', JSON.stringify(userList));
+        },
+        getShopingCart: function(){
+            var index = userList.findIndex(user => user.id === currentUser.id);
+            return userList[index].shopingCart
+        },
+        addItemByID: function(cat,id){
+            const item = itemStorage.get(cat).find(item=> item.id === +id);
+            userStorage.addItem(item);
+
         }
+
     } 
 
 })()
