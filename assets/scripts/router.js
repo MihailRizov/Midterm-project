@@ -25,6 +25,7 @@ function router() {
         case 'cat7' : catController(); break;
         case 'login' : loginController(); break;
         case 'register' : registerController(); break;
+        case 'shoppingBasket' : basketController(); break;
         case '1' : itemController(); break;
         default: homeController();
     }

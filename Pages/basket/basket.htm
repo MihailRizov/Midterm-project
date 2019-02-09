@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<main>
-
-    <div id="basketContainer">
-        <img src="{{imgSrc}}" alt="imagePhoto">
-        
+<div class="basketContainer">
+    <div style='background-image: url("{{imgSrc}}");'></div>
+    <div>
+        <p>{{title}}</p>
+        <p>{{color}}</p>
+        {{#if size}}
+        <p>размер: {{size}}</p>
+         {{/if}}
+        <p>{{quontity}}</p>
     </div>
-</main>
-</body>
-</html>
+    <div>
+        <h2>{{price}}</h2>
+    </div>
+</div>

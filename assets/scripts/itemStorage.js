@@ -113,20 +113,16 @@ class Item {
         this.delivery = '48 часа';
         this.imgSrc = imgSrc;
         this.id = uniqueIDAssigner.getUnicueID();
-        this.price = +(Math.random() * (200 - 100) + 100).toFixed(2);
+        this.price = Math.ceil(Math.random() * (200 - 100)) + 100
         this.color = color;
+        this.quantity = 1;
     }
 }
 
 class Item2  extends Item{
     constructor(title, imgSrc, size, color){
         super(title,imgSrc,color)
-        this.size = size;
-        this.delivery = '48 часа';
-        this.quantity = 1;
-        this.id = uniqueIDAssigner.getUnicueID();
-        this.price = +(Math.random() * (200 - 100) + 100).toFixed(1);
-       
+        this.size = size;  
     }
 }
 
