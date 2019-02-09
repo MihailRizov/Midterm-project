@@ -7,9 +7,10 @@ var userStorage = (function(){
             this.name = name;
             this.password = password;
             this.id = userId++;
-            this.shopingCart = [];
-            this.email=email;
+                this.shopingCart = [21,1,1,1,1,1,1,1,1,1,1,1];
+                this.email=email;
         }
+
         // addItem(item){
         //     this.shopingCart.push(item)
         // }
@@ -19,13 +20,24 @@ var userStorage = (function(){
         // getItemCount(){
         //     return this.shopingCart.length += 1;
         // }
+
+        addItem(item){
+            this.shopingCart.push(item);
+        }
+        getShopingCart(){
+            return this.shopingCart;
+        }
+        getItemCount(){
+            return this.shopingCart.length;
+        }
+
     }
 
     if (localStorage.getItem('userList') !== null) {
         userList = JSON.parse(localStorage.getItem('userList'));
     } else {
         userList = [
-            new User('a','1', 'aaa')
+            new User('a','1111', 'a@a.com')
         ]
     }
 
@@ -49,7 +61,7 @@ console.log(userList)
 
         },
         getCurrentUser: function(){
-            return currentUser
+            return currentUser;
         },
         logOut: function(){
             currentUser = null;
@@ -76,5 +88,5 @@ console.log(userList)
 
     } 
 
-})()
+})();
 /// moje da pisheh if (userList.getCurrentUser()){}- ako ima lognat shte sraboti
