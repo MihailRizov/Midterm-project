@@ -7,8 +7,8 @@ var userStorage = (function(){
             this.name = name;
             this.password = password;
             this.id = userId++;
-                this.shopingCart = [1,1,1,1];
-                this.email=email;
+            this.shopingCart = [];
+            this.email=email;
         }
 
         // addItem(item){
@@ -53,6 +53,7 @@ console.log(userList)
             var loginUser = userList.find(user => user.email === email && user.password === pass);
             if (loginUser) {
                 currentUser = loginUser;
+                $('#number-orders').text(userStorage.getShopingCart().length)
                 sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
                 return true;
             } else {
@@ -65,6 +66,7 @@ console.log(userList)
         },
         logOut: function(){
             currentUser = null;
+            $('#number-orders').text(0)
             sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
         },
         register: function(username, password,email) {
@@ -83,7 +85,11 @@ console.log(userList)
         addItemByID: function(cat,id){
             const item = itemStorage.get(cat).find(item=> item.id === +id);
             userStorage.addItem(item);
+            $('#number-orders').text(userStorage.getShopingCart().length)
 
+        },
+        removeItemByID: function(id){
+            // for
         }
 
     } 

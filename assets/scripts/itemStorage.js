@@ -1,4 +1,5 @@
-var itemStorage = new Map();
+var itemStorage = (function(){
+    var itemStorage = new Map();
 var uniqueIDAssigner = {
     uniqueIDs: [],
     getUnicueID: function(){
@@ -153,6 +154,8 @@ for (let index = 0; index < TITLE_WOMAN.length; index++) {
 // for (let index = 0; index < TITLE_BAGS.length; index++) {
 //     itemStorage.get('cat6').push(new Item(TITLE_[index], TITLE_SHOES_SRC[index], SIZE[index],COLOR_SHOES[index]))
 // }
+return itemStorage;
 
-console.log(itemStorage.get('cat1'));
 
+
+})()

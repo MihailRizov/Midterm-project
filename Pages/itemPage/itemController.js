@@ -21,8 +21,13 @@ function itemController() {
 
             $('#buy').on('click', function (event) {
                 event.preventDefault();
-                location.replace('#page=shoppingBasket');
-                console.log(cat);
+                if (userStorage.getCurrentUser()){
+                    console.log(cat, +itemId)
+                    userStorage.addItemByID(cat,+itemId);
+                    console.log(userStorage.getShopingCart())
+                } else {
+                    location.replace('#page=login');
+                }
             });
         })
 
