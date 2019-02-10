@@ -11,15 +11,15 @@ var userStorage = (function(){
             this.email=email;
         }
 
-        addItem(item){
-            this.shopingCart.push(item);
-        }
-        getShopingCart(){
-            return this.shopingCart;
-        }
-        getItemCount(){
-            return this.shopingCart.length;
-        }
+        // addItem(item){
+        //     this.shopingCart.push(item);
+        // }
+        // getShopingCart(){
+        //     return this.shopingCart;
+        // }
+        // getItemCount(){
+        //     return this.shopingCart.length;
+        // }
 
     }
 
@@ -68,9 +68,9 @@ console.log(userList)
             userList[index].shopingCart.push(item);
             localStorage.setItem('userList', JSON.stringify(userList));
         },
-        getShopingCart: function(){
+        getShopingCart: function(option){
             var index = userList.findIndex(user => user.id === currentUser.id);
-            return userList[index].shopingCart
+            return (index) ? userList[index].shopingCart : [];
         },
         addItemByID: function(cat,id){
             const item = itemStorage.get(cat).find(item=> item.id === +id);
@@ -79,7 +79,11 @@ console.log(userList)
 
         },
         removeItemByID: function(id){
-            // for
+            var index = userList.findIndex(user => user.id === currentUser.id);
+            userList[index].shopingCart = userList[index].shopingCart.filter(item => item.id !== id);
+            $('#number-orders').text(userStorage.getShopingCart().length)
+            basketController();
+            localStorage.setItem('userList', JSON.stringify(userList));
         }
 
     } 

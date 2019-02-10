@@ -1,9 +1,6 @@
 function catController(searchedItems) {
     const page = location.hash.split("=")[1];
-    $('main').css('display', 'flex');
-    searchResault.emptyResault();
-
-
+    $('main').css('display', 'flex').height(1050);
     var content = itemStorage.get(page);
     if (searchedItems){
         content = searchedItems;

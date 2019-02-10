@@ -11,21 +11,20 @@ function basketController() {
         .then(() => $('main').html(html))
         .then(() => $(`<div id="totalPr"><h2>Общо: ${totalPrice} лв</h2><button>Купи</button></div>`).appendTo('main'))
         .then(() => {
-            var mainHeight = $('main').height()
-            if (userStorage.getShopingCart().length < 6) {
+            var mainHeight = ($('.bCont').height() * userStorage.getShopingCart().length) + $('#totalPr').height();
+            console.log(mainHeight);
+            if (userStorage.getShopingCart().length < 7) {
                 var normalHeight = 1050;
                 console.log(666666666666)
                 $('main').css('display','block');
                 $('main').height(normalHeight);
-                // var topMargin = 150;
-                // var buttonMargin = userStorage.getShopingCart().length * topMargin
-                // $('#totalPr').css('margin-top', -`${buttonMargin}`);
             } else {
-                console.log(2222222222222)
-                // var bigHeight = normalHeight + 150;
-                $('main').height(mainHeight);
-              
+                $('main').height(mainHeight); 
             }
+        }).then(()=>{
+            $('.deleteItem').on('click', function(){
+                userStorage.removeItemByID(+$(this).attr('itemId'));
+            })
         })
 
 
