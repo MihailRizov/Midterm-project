@@ -7,7 +7,9 @@ function basketController (){
     $.get('Pages/basket/basket.htm').then(text => {
         templateString = text}).then(() => template = Handlebars.compile(templateString))
         .then(() => shoppingCart.forEach(item => html+= template(item)))
-        .then(() => $('main').html(html))
+        .then(() => $('main').html(html)).then(()=>{
+            console.log(userStorage.getShopingCart().length)
+        })
         .then(() => $(`<div id="totalPr"><h2>Общо: ${totalPrice} лв</h2><button>Купи</button>`).appendTo('main'))
          
 };
