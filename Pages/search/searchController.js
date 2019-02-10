@@ -18,5 +18,7 @@ function searchController(words) {
     }
     if (resault.length){
         catController(resault);
+    } else {
+        $(".search").val('').attr('placeholder', 'няма резултат')
     }
 }
