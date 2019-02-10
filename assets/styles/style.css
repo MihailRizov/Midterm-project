@@ -502,11 +502,9 @@ main > .sections {
 }
 
 #itemInformation *{
-    /* border:1px solid green; */
     height:40px;
     text-align: left;
     padding-top:11px;
-    /* background-color: rgb(186, 248, 174); */
     font-size:1.1em;
     margin-top:20px;
 }
@@ -547,6 +545,7 @@ main > .sections {
     justify-content: space-evenly;
     height:150px;
     align-items: center;
+    /* flex-direction:column; */
 }
 
 #basketImg{
@@ -577,6 +576,7 @@ main > .sections {
     display:flex;
     justify-content: flex-end;
     align-items: center;
+   
 }
 
 #totalPr *{

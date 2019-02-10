@@ -38,7 +38,7 @@ $(function () {
 
     $('#basket').on('click', (event) => {
         event.preventDefault();
-        console.log(8888888)
+    
         if (userStorage.getCurrentUser() && userStorage.getShopingCart().length) {
             location.replace('#page=shoppingBasket');
             if (userStorage.getShopingCart().length < 1) {
@@ -50,26 +50,18 @@ $(function () {
                 }, 5000, () => {
                     $('#basket').text('');
                 })
-                console.log(777777777777)
             }else{
                 location.replace('#page=shoppingBasket');
-                console.log(4444)
             }
-        
         } else {
             $('#basket').animate({
                 width: 250,
             }, 500).text('Нямате налични артикули.').animate({
                 width: 50,
             }, 5000, () => {
-
                 $('#basket').text('');
-
             });
-            console.log(99999)
         }
-    
     });
-
 });
 
