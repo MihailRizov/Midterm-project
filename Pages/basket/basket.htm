@@ -1,14 +1,18 @@
+
+<div class="bCont">
 <div class="basketContainer">
-    <div style='background-image: url("{{imgSrc}}");'></div>
-    <div>
+    <div id="basketImg" style='background-image: url("{{imgSrc}}");'></div>
+    <div class="basInfo">
         <p>{{title}}</p>
-        <p>{{color}}</p>
+        <p>Цвят:{{color}}</p>
         {{#if size}}
-        <p>размер: {{size}}</p>
+        <p>Размер: {{size}}</p>
          {{/if}}
-        <p>{{quontity}}</p>
+        <p>Количество: {{quantity}} бр.</p>
     </div>
-    <div>
-        <h2>{{price}}</h2>
+    <div class="totalPr">
+        <h2>Цена: {{price}} лв </h2>
+        <button class="deleteItem">Премахни продукта</button>
     </div>
+</div>
 </div>

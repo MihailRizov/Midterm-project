@@ -8,6 +8,9 @@
             outline: none;
         }
         
+        #wrap{
+          height:1050px;  
+        }
         #login-register { 
             border:outset;
             width:600px;
@@ -15,8 +18,7 @@
             display:flex;
             flex-wrap: wrap;
             flex-direction: column;
-            margin-left:auto;
-            margin-right: auto;
+            margin-left:180px;
             padding:10px;
             background-color: rgb(186, 248, 174);
         
@@ -63,26 +65,6 @@
             align-items: center;
         }
         
-        #email,#password {
-            width:300px;
-            height: 30px;
-            margin-bottom:10px;
-        }
-        
-        #info > .infoRegister {
-            padding-bottom:10px;
-        }
-        
-        #enterLogin {
-            margin:10px auto;
-            width:200px;
-            height:40px;
-            background-color: rgb(19, 53, 28);
-            border-radius: 10px;
-            color:white;
-            cursor: pointer;
-            
-        }
         input[type=submit]{
           font-size:1.3em;
            outline: none;
@@ -198,7 +180,7 @@
         } 
          
 </style>
-
+<div id="wrap">
 <div id="login-register">
     <div id="generalBox">
         <button id="exit">X</button>
@@ -256,4 +238,5 @@
     </div>
     <input id="submitButtonReg" type="submit" value="Регистрация">
 
+</div>
 </div>
