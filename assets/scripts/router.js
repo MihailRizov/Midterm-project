@@ -6,6 +6,10 @@ function router() {
     var nav  = page;
     if (cat) {
         nav = '1';
+    }
+    if (page.includes('search')){
+        nav = 'search';
+        var terms = location.hash.split("q=").splice(1)
     } 
     
     //if not logged
@@ -26,6 +30,7 @@ function router() {
         case 'login' : loginController(); break;
         case 'register' : registerController(); break;
         case 'shoppingBasket' : basketController(); break;
+        case 'search' : searchController(terms); break;
         case '1' : itemController(); break;
         default: homeController();
     }

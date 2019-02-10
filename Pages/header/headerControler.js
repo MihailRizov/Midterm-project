@@ -15,21 +15,14 @@ $(function () {
     });
     $(".search").on("keyup", function (event) {
         if (event.keyCode === 13) {
-            var searchItems = ($(".search").val()).trim().split(' ');
-            var resault = [];
-            console.log('-------------')
-            for (let cat of itemStorage.values()) {
-                searchItems.forEach(word => cat.forEach(item =>{
-                    var title = item.title.toLowerCase();
-                    if (title.includes(word.toLowerCase())){
-                        if (!resault.some(res => res.id === item.id)){
-                            resault.push(item);
-                        }
-                    }
-                }))
-            }
-            if (resault.length){
-                catController(resault);
+            var searchItems = ($(".search").val()).trim().split(' ');           
+            if (searchItems.length >= 1){
+                var keyWords = searchItems.join('"q="');
+                var searchAddress = '#page=search?q="'+keyWords+'"'
+                searchResault.addResault(searchAddress);
+                location.replace(searchAddress)
+            } else {
+                $(".search").attr('placeholder', 'напиши нещо тук')
             }
             
             

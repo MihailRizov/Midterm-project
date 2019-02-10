@@ -15,8 +15,12 @@ function itemController() {
             console.log(111111111111111111111111111)
             $('#back').on('click', function (event) {
                 event.preventDefault();
-                location.replace('#page=' + cat);
-                console.log(cat);
+                if (searchResault.lastResault()){
+                    location.replace(searchResault.lastResault()); 
+                } else {
+                    location.replace('#page=' + cat);
+                }
+                
             });
 
             $('#buy').on('click', function (event) {
