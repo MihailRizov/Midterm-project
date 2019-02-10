@@ -1,15 +1,16 @@
 var searchResault = (function(){
-    var searchResault = [];
+    var searchResaults = '';
 
     return{
         lastResault: function(){
-            return searchResault[searchResault.length-1]
+            return searchResaults
         },
         addResault: function(url){
-            searchResault.push(url)
+            searchResaults = url
+            console.log(searchResaults)
         },
         emptyResault: function(){
-            searchResault=[];
+            searchResaults = undefined;
         }
     }
 })()

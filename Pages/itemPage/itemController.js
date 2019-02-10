@@ -16,7 +16,7 @@ function itemController() {
             $('#back').on('click', function (event) {
                 event.preventDefault();
                 if (searchResault.lastResault()){
-                    location.replace(searchResault.lastResault()); 
+                    location.replace(searchResault.lastResault());
                 } else {
                     location.replace('#page=' + cat);
                 }

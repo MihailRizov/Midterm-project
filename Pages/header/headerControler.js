@@ -19,9 +19,7 @@ $(function () {
             var searchItems = ($(".search").val()).trim().split(' ');           
             if (searchItems.length >= 1){
                 var keyWords = searchItems.join('"q="');
-                var searchAddress = '#page=search?q="'+keyWords+'"'
-                searchResault.addResault(searchAddress);
-                location.replace(searchAddress)
+                location.replace('#page=search?q="'+keyWords+'"')
             } else {
                 $(".search").attr('placeholder', 'напиши нещо тук')
             }
