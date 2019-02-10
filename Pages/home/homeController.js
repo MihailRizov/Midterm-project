@@ -5,6 +5,7 @@ function homeController() {
             var id = $(this).attr('catId');
             location.replace(`#page=${id}`);
         })
+        
     });
     
         
@@ -12,6 +13,3 @@ function homeController() {
    
 }
 
-// var id = $(this).attr('catId');
-//         console.log($(this));
-//         location.replace(`#page=${id}`);

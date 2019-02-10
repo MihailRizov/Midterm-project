@@ -32,7 +32,9 @@ function router() {
         case 'shoppingBasket' : basketController(); break;
         case 'search' : searchController(terms); break;
         case '1' : itemController(); break;
-        default: homeController();
+
+
+        default: homeController();  break;
     }
 }
 

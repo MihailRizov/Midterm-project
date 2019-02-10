@@ -16,14 +16,14 @@ function itemController() {
             $('#back').on('click', function (event) {
                 event.preventDefault();
 
-                if (searchResault.lastResault()) {
+                // if (searchResault.lastResault()) {
 
                 if (searchResault.lastResault()){
                     location.replace(searchResault.lastResault());
                 } else {
                     location.replace('#page=' + cat);
                 }
-            }
+            // }
             });
 
             $('#buy').on('click', function (event) {
