@@ -11,16 +11,6 @@ var userStorage = (function(){
             this.email=email;
         }
 
-        // addItem(item){
-        //     this.shopingCart.push(item)
-        // }
-        // getShopingCart(){
-        //     return this.shopingCart;
-        // }
-        // getItemCount(){
-        //     return this.shopingCart.length += 1;
-        // }
-
         addItem(item){
             this.shopingCart.push(item);
         }

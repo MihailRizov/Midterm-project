@@ -6,10 +6,9 @@ function loginController () {
                 event.preventDefault();
                 let email = $('#email').val();
                 let pass = $('#password').val();
-                console.log(email, pass)
+                
                 if (userStorage.logIn(email, pass)) {
-                    console.log(email);
-                    console.log(pass);
+                    
                     $('#loggin').text('Изход')
                     if (urlStorage.getLastURL()){
                         location.replace(urlStorage.getLastURL())
