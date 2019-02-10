@@ -17,6 +17,9 @@ function searchController(words) {
         }))
     }
     if (resault.length){
+        var keyWords = searchWords.join('"q="');
+        var searchAddress = '#page=search?q="'+keyWords+'"'
+        searchResault.addResault(searchAddress);
         catController(resault);
     } else {
         $(".search").val('').attr('placeholder', 'няма резултат')
