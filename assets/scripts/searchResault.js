@@ -8,5 +8,8 @@ var searchResault = (function(){
         addResault: function(url){
             searchResault.push(url)
         },
+        emptyResault: function(){
+            searchResault=[];
+        }
     }
 })()

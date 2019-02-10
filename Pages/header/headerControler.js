@@ -5,6 +5,7 @@ $(function () {
 
     $('#loggin').on('click', function () {
         if (!(userStorage.getCurrentUser())) {
+            urlStorage.addURL(location.hash);
             location.replace('#page=login');
         } else {
             $('#loggin').text('Вход / Регистрация')

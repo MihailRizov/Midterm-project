@@ -1,5 +1,6 @@
 function catController(searchedItems) {
     const page = location.hash.split("=")[1];
+    searchResault.emptyResault();
     var content = itemStorage.get(page);
     if (searchedItems){
         content = searchedItems;

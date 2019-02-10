@@ -30,6 +30,7 @@ function itemController() {
                     userStorage.addItemByID(cat,+itemId);
                     console.log(userStorage.getShopingCart())
                 } else {
+                    urlStorage.addURL(location.hash);
                     location.replace('#page=login');
                 }
             });

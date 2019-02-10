@@ -11,7 +11,13 @@ function loginController () {
                     console.log(email);
                     console.log(pass);
                     $('#loggin').text('Изход')
-                    location.replace('#page=home');
+                    if (urlStorage.getLastURL()){
+                        location.replace(urlStorage.getLastURL())
+                        urlStorage.empty();
+                    } else {
+                        location.replace('#page=home');
+                    }
+                    
                 } else {
                     $('#email').css('background-color', 'rgba(250, 25, 25, 0.76)');
                     $('#password').css('background-color', 'rgba(250, 25, 25, 0.76)');
