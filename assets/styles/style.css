@@ -303,17 +303,13 @@ aside > div ~ div:hover{
     margin-right: 10px;
 }
 
-
-/* aside li a:hover{
-    color:white; 
-} */
-
 #banner {
     width:95%;
     height:530px;
     margin-top:50px;
     background-image: url('../images/side_baner.jpg');
     border-radius: 8px;
+    cursor: pointer;
 }
 
 
@@ -539,9 +535,64 @@ main > .sections {
     font-weight: bold;
     color: red;
 }
+/* ===========BASKET============== */
+.bCont{
+    width:100%;
+    height:155px;
+}
 
+.basketContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height:150px;
+    align-items: center;
+}
 
+#basketImg{
+    background-image: url(assets/images/itemMan5.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 150px;
+}
 
+.basInfo{
+    height:130px;
+}
+
+.basInfo>p{
+     padding-top:15px;
+}
+
+.deleteItem{
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#totalPr{
+    width:100%;;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#totalPr *{
+    margin-left:50px;
+    float:right;
+    font-size:1.5em;
+    border-radius: 15px;
+    text-align:center;
+    font-weight:bold;
+}
+#totalPr>button{
+    height:38px;
+    width:100px;
+    background-color:red;
+    cursor: pointer;
+}
 /* ========== FOOTER ============ */
 
 body > #wrapper > footer {

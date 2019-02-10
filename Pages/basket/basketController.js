@@ -8,5 +8,6 @@ function basketController (){
         templateString = text}).then(() => template = Handlebars.compile(templateString))
         .then(() => shoppingCart.forEach(item => html+= template(item)))
         .then(() => $('main').html(html))
-        .then(() => $(`<div><h2>Общо: ${totalPrice}</h2><button>Купи</button>`).appendTo('main'))
+        .then(() => $(`<div id="totalPr"><h2>Общо: ${totalPrice} лв</h2><button>Купи</button>`).appendTo('main'))
+         
 };
