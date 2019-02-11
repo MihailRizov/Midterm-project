@@ -16,9 +16,12 @@ $(function () {
     });
     $(".search").on("keyup", function (event) {
         if (event.keyCode === 13) {
-            var searchItems = ($(".search").val()).trim().split(' ');           
+            const OLD_PAGE = location.hash.split("=")[1];
+            const MAX_LENGHT = 100;
+            var searchItems = ($(".search").val()).substring(0, MAX_LENGHT).trim().split(' ');           
             if (searchItems.length >= 1){
                 var keyWords = searchItems.join('"q="');
+                urlStorage.addURL(OLD_PAGE);
                 location.replace('#page=search?q="'+keyWords+'"')
             } else {
                 $(".search").attr('placeholder', 'напиши нещо тук')

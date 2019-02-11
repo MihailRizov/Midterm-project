@@ -70,17 +70,17 @@ console.log(userList)
         },
         getShopingCart: function(option){
             var index = userList.findIndex(user => user.id === currentUser.id);
-            return (index) ? userList[index].shopingCart : [];
+            return userList[index].shopingCart
         },
         addItemByID: function(cat,id){
             const item = itemStorage.get(cat).find(item=> item.id === +id);
             userStorage.addItem(item);
             $('#number-orders').text(userStorage.getShopingCart().length)
-
         },
         removeItemByID: function(id){
             var index = userList.findIndex(user => user.id === currentUser.id);
-            userList[index].shopingCart = userList[index].shopingCart.filter(item => item.id !== id);
+            var itemIndex = userList[index].shopingCart.findIndex(item => item.id === id);
+            userList[index].shopingCart.splice(itemIndex,1);
             $('#number-orders').text(userStorage.getShopingCart().length)
             basketController();
             localStorage.setItem('userList', JSON.stringify(userList));

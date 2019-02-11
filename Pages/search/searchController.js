@@ -20,8 +20,11 @@ function searchController(words) {
         var keyWords = searchWords.join('"q="');
         var searchAddress = '#page=search?q="'+keyWords+'"'
         searchResault.addResault(searchAddress);
+        urlStorage.empty()
         catController(resault);
     } else {
+        location.replace('#page=' + urlStorage.getLastURL())
         $(".search").val('').attr('placeholder', 'няма резултат')
+        
     }
 }

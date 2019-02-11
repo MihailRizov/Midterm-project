@@ -45,7 +45,7 @@ function itemController() {
 
 
 function changeText (button, string){
-    setInterval(()=>{
+    setTimeout(()=>{
         button.text(string)
     },2000)
 }
