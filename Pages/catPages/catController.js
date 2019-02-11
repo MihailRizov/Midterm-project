@@ -29,14 +29,6 @@ function catController(searchedItems) {
             const page = location.hash
             location.replace(page + '/' + $(this).attr('itemid'));
             }
-<<<<<<< HEAD
-        }))
-
-        // $('aside').on('click',function(event){
-        //     event.preventDefault();
-        //      $('main').height(1050);
-        // })
-=======
         })).then(() => {
             var coef = Math.ceil($('main > div').length / 3);
             $('main').height(HEIGHT * coef);
@@ -44,5 +36,4 @@ function catController(searchedItems) {
                 $('main').height(HEIGHT * 2);
             }
         })
->>>>>>> 027bcf7099050e87bd8134dd0fe10bbee8e9e852
 };

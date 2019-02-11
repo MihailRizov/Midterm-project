@@ -14,11 +14,24 @@ $(function () {
 
         }
     });
+    $(() => {
+            for (let cat of itemStorage.values()) {
+                cat.forEach(item => {
+                    $('#suggestions').append(
+                    $(`<option value="${item.title}">${''}</option>`));
+                })
+            }
+    })
+            
+
+
+
     $(".search").on("keyup", function (event) {
         if (event.keyCode === 13) {
             const OLD_PAGE = location.hash.split("=")[1];
             const MAX_LENGHT = 100;
-            var searchItems = ($(".search").val()).substring(0, MAX_LENGHT).trim().split(' ');           
+            var searchItems = ($(".search").val()).substring(0, MAX_LENGHT).trim().split(' ');
+            searchItems = searchItems.filter(word => word.length > 3);          
             if (searchItems.length >= 1){
                 var keyWords = searchItems.join('"q="');
                 urlStorage.addURL(OLD_PAGE);

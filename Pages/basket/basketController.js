@@ -1,10 +1,5 @@
 function basketController() {
-<<<<<<< HEAD
-
-    const shoppingCart = userStorage.getShopingCart();
-=======
     var shoppingCart = userStorage.getShopingCart();
->>>>>>> 027bcf7099050e87bd8134dd0fe10bbee8e9e852
     var totalPrice = shoppingCart.reduce((total, item) => total + item.price, 0);
     var template;
     var templateString;
