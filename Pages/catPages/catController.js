@@ -1,6 +1,7 @@
 function catController(searchedItems) {
     const page = location.hash.split("=")[1];
-    $('main').css('display', 'flex').height(1050);
+    const HEIGHT = 525;
+    $('main').css('display', 'flex')
     var content = itemStorage.get(page);
     if (searchedItems){
         content = searchedItems;
@@ -20,6 +21,7 @@ function catController(searchedItems) {
                 for(let key of itemStorage.keys()){
                     if (itemStorage.get(key).some(item => item.id === +$(this).attr('itemId'))){
                         cat = key;
+                        console.log(key + '/////');
                     }
                 }
                 location.replace(`#page=${cat}/${$(this).attr('itemid')}`);
@@ -27,10 +29,20 @@ function catController(searchedItems) {
             const page = location.hash
             location.replace(page + '/' + $(this).attr('itemid'));
             }
+<<<<<<< HEAD
         }))
 
         // $('aside').on('click',function(event){
         //     event.preventDefault();
         //      $('main').height(1050);
         // })
+=======
+        })).then(() => {
+            var coef = Math.ceil($('main > div').length / 3);
+            $('main').height(HEIGHT * coef);
+            if ($('main').height() < HEIGHT * 2){
+                $('main').height(HEIGHT * 2);
+            }
+        })
+>>>>>>> 027bcf7099050e87bd8134dd0fe10bbee8e9e852
 };
