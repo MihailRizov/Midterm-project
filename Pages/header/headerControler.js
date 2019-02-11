@@ -30,14 +30,7 @@ $(function () {
             
         }  
         });
-    // $('#number-orders').on('click', (event) => {
-    //     event.preventDefault();
-    //     if (userStorage.getCurrentUser() && userStorage.getShopingCart().length) {
-    //         $('#number-orders').text(userStorage.getShopingCart().length);
-    //     } else {
-    //         $('#number-orders').text('0');
-    //     }
-    // });
+
 
     $('#basket').on('click', (event) => {
         event.preventDefault();
@@ -55,6 +48,8 @@ $(function () {
                 })
             }else{
                 location.replace('#page=shoppingBasket');
+                // basketController();
+                
             }
         } else {
             $('#basket').animate({

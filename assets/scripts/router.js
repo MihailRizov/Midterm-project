@@ -29,7 +29,9 @@ function router() {
         case 'shoppingBasket' : basketController(); break;
         case 'search' : searchController(terms); break;
         case '1' : itemController(); break;
-        default: homeController(); break;
+
+        default: homeController();  break;
+
     }
 }
 

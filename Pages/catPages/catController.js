@@ -15,7 +15,7 @@ function catController(searchedItems) {
             templateString = text;
         }).then(() => template = Handlebars.compile(templateString))
         .then(() => content.forEach(content => htm += template(content)))
-        .then(() => $('main').html(htm)).then(() => $('main > div').on('click', function () {
+        .then(() => $('main').html(htm)).then(()=> $('main').height(1050)).then(() => $('main > div').on('click', function () {
             if (searchedItems){
                 var cat;
                 for(let key of itemStorage.keys()){
@@ -29,6 +29,14 @@ function catController(searchedItems) {
             const page = location.hash
             location.replace(page + '/' + $(this).attr('itemid'));
             }
+<<<<<<< HEAD
+        }))
+
+        // $('aside').on('click',function(event){
+        //     event.preventDefault();
+        //      $('main').height(1050);
+        // })
+=======
         })).then(() => {
             var coef = Math.ceil($('main > div').length / 3);
             $('main').height(HEIGHT * coef);
@@ -36,4 +44,5 @@ function catController(searchedItems) {
                 $('main').height(HEIGHT * 2);
             }
         })
+>>>>>>> 027bcf7099050e87bd8134dd0fe10bbee8e9e852
 };

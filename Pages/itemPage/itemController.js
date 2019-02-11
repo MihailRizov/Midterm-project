@@ -48,4 +48,4 @@ function changeText (button, string){
     setTimeout(()=>{
         button.text(string)
     },2000)
-}
+};
