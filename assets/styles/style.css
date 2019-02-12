@@ -122,6 +122,10 @@ body * {
 }
 
 /* ============= HEADER ============== */
+header > details::-webkit-details-marker {
+    display:none;
+}
+
 
 header {
     display:block;

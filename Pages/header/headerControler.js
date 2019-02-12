@@ -36,6 +36,7 @@ $(function () {
                 var keyWords = searchItems.join('"q="');
                 urlStorage.addURL(OLD_PAGE);
                 location.replace('#page=search?q="'+keyWords+'"')
+                $(".search").val('');
             } else {
                 $(".search").attr('placeholder', 'напиши нещо тук')
             }
@@ -75,4 +76,3 @@ $(function () {
         }
     });
 });
-

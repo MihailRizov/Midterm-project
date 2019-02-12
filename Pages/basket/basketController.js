@@ -4,7 +4,7 @@ function basketController() {
     var template;
     var templateString;
     var html = '';
-    var normalHeight = 1050;
+    const NORMAL_HEIGHT = 1050;
     $.get('Pages/basket/basket.htm').then(text => {
         templateString = text
     }).then(() => template = Handlebars.compile(templateString))
@@ -12,21 +12,19 @@ function basketController() {
         .then(() => $('main').html(html))
         .then(() => $(`<div id="totalPr"><h2 id='total'>Общо: ${totalPrice} лв</h2><button id="buy1">Купи</button></div>`).appendTo('main'))
         .then(() => {
-            var mainHeight = $('main').height();
-
-            if (userStorage.getShopingCart().length < 6) {
-
-                var mainHeight = ($('.bCont').height() * userStorage.getShopingCart().length) + $('#totalPr').height();
+            // var mainHeight = $('main').height();
+            var mainHeight = ($('.bCont').height() * userStorage.getShopingCart().length) + $('#totalPr').height();
+            $('main').css('display', 'block');
+            if (userStorage.getShopingCart().length < 7) {
                 console.log(mainHeight);
-                if (userStorage.getShopingCart().length < 7) {
-                    var normalHeight = 1050;
-                    $('main').css('display', 'block');
-                    $('main').height(normalHeight);
-                } else {
-                    console.log(2222222222222)
-                    $('main').height(mainHeight);
-                    console.log($('main').height())
-                }
+                // if (userStorage.getShopingCart().length < 7) {
+                    // var NORMAL_HEIGHT = 1050;
+                    $('main').height(NORMAL_HEIGHT);
+                // } else {
+                //     console.log(2222222222222)
+                //     $('main').height(mainHeight);
+                //     console.log($('main').height())
+                // }
             } else {
                 $('main').height(mainHeight);
             }
@@ -40,14 +38,14 @@ function basketController() {
             $('#buy1').on('click', function () {
                 if (totalPrice > 0) {
                     $('main').html($('<p>Благодаря Ви, че пазарувахте в <img width="300" src="assets/images/logo_img.png" alt="Logo" /></p>'))
-                    lpocation();
-                    $('main').height(normalHeight);
+                    lpocation('#page=home', 5000);
+                    $('main').height(NORMAL_HEIGHT);
 
                  userStorage.buyAllItems();
                 } else {
                     $('main').html($('<p>Нямате продукти </p>'))
-                    $('main').height(normalHeight);
-                    lpocation();
+                    $('main').height(NORMAL_HEIGHT);
+                    lpocation(basketController, 2000);
                 }
             })
         })
@@ -55,9 +53,13 @@ function basketController() {
 };
 
 
-function lpocation() {
+function lpocation(where, time) {
     setTimeout(() => {
-        location.replace('#page=home');
-        console.log(9999999999999)
-    }, 7000)
+        if (typeof where === 'string'){
+            location.replace(where);
+            console.log(9999999999999)  
+        } else {
+            where()
+        }       
+    }, time)
 };
